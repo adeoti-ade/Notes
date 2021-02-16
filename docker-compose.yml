@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: notes_local
+
+    ports:
+    - "8000:8000"
+
+    environment:
+      - DEBUG=True
+
+    volumes:
+    - ./src/:/home/web/src
+
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
