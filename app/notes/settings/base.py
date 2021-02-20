@@ -16,7 +16,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'main',
-    'account'
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -31,7 +31,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'notes.urls'
 
-AUTH_USER_MODEL = "account.User"
+AUTH_USER_MODEL = "users.User"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
