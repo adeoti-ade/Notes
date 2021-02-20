@@ -31,7 +31,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'notes.urls'
 
-AUTH_USER_MODEL = "account.CustomUser"
+AUTH_USER_MODEL = "account.User"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
