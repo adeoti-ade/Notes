@@ -5,23 +5,17 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: notes_local
-
+    container_name: notes_local_web
     ports:
     - "8000:8000"
-
     environment:
       - DEBUG=True
-
     volumes:
-    - ./src/:/home/web/src
-
+    - ./app:/usr/src/app
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
-
     depends_on:
       - db
-
     env_file:
       - .env.dev
 
